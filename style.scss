@@ -1,0 +1,369 @@
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Lato|Poiret+One|Raleway|Source+Sans+Pro');
+
+$grey-text: #6F6F6F;
+$break-small: 500px;
+$break-large: 1400px;
+
+body {
+  margin: 0;
+  padding-bottom: 5%;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto 1% auto;
+  p {
+    font-family: "Times New Roman", Times, serif;
+  }
+  ul li {
+    font-family: "Times New Roman", Times, serif;
+  }
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
+}
+header {
+  height: 20.4em;
+  background-color: #D7E3FB;
+  margin-bottom: 4%;
+  @media screen and (max-width: $break-small) {
+    height: 25.4em;
+  }
+}
+
+
+// ***********navigation*******************************
+nav  {
+  padding-top: 5%;
+  padding-left: 16%;
+  @media screen and (max-width: $break-small) {
+    padding-left: 10%;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    li {
+      margin-right: 5%;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $grey-text;
+        font-family: 'Raleway', sans-serif;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.home-nav {
+  padding-left: 0;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    @media screen and (max-width: $break-small) {
+      justify-content: center;
+    }
+  }
+}
+// ***********homepage******************************
+.home-header {
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 14%;
+  }
+  img {
+    margin-top: 8.4%;
+    margin-left: 57%;
+    @media screen and (max-width: $break-small) {
+      width: 85%;
+      margin-top: 49.4%;
+      margin-left: 7.5%;
+    }
+    @media screen and (min-width: $break-large) {
+      margin-top: 5.9%;
+    }
+  }
+}
+#home-title {
+    font-size: 2.2em;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 4px;
+    @media screen and (max-width: $break-small) {
+      text-align: center;
+      margin: 7% auto 2% auto;
+    }
+}
+
+// ***********text on home page*********************
+
+.main-intro {
+  display: flex;
+  justify-content: flex-start;
+  @media screen and (max-width: $break-small)  {
+    justify-content: center;
+  }
+  p {
+    width: 60%;
+    line-height: 25px;
+    color: $grey-text;
+    @media screen and (max-width: $break-small) {
+      width: 80%;
+    }
+
+  }
+}
+// ***********text on christy's page*********************
+.christy-container {
+  background-color: #eeecf9;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.teacher-title {
+  width: 50%;
+  text-align: right;
+  padding-top: 6%;
+  @media screen and (max-width: $break-small){
+      width: 100%;
+      text-align: center;
+    }
+  h1 {
+   font-family: 'Poiret One', cursive;
+   font-size: 2.3em;
+   margin: 0;
+   letter-spacing: 4px;
+   }
+  h3 {
+     font-family: 'Raleway', sans-serif;
+     margin: 0;
+     font-size: 1em;
+     letter-spacing: 2px;
+  }
+}
+.title-space {
+  margin-bottom: 5%;
+}
+.teacher-info {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $break-small) {
+    flex-direction: column;
+  }
+  div {
+    width: 46%;
+    margin: 0 auto;
+    @media screen and (max-width: $break-small) {
+      width: 80%;
+    }
+    p {
+      padding-top: 1%;
+      color: $grey-text;
+      font-size: .95em;
+      margin-bottom: 0;
+    }
+    h2 {
+      color: $grey-text;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.6em;
+      font-weight: 200;
+    }
+    img {
+      width: 100%;
+    }
+    ul li {
+      list-style: none;
+      letter-spacing: 1.3px;
+      line-height: 22px;
+      a {
+        text-decoration: none;
+      }
+      span {
+        font-size: 1.1em;
+        font-weight: bolder;
+      }
+    }
+    ul {
+      padding-left: 0;
+    }
+  }
+  .left-summer {
+    width: 65%;
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+    }
+
+  }
+  .right-summer {
+    width: 30%;
+    @media screen and (max-width: $break-small) {
+      width: 80%;
+    }
+    h2 {
+      margin-top: 0;
+      @media screen and (max-width: $break-small) {
+        margin-top: 2%;;
+      }
+    }
+  }
+}
+.teacher-contact {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1%;
+  @media screen and (max-width: $break-small) {
+    flex-direction: column;
+  }
+  div {
+    width: 46%;
+    margin: auto;
+    @media screen and (max-width: $break-small) {
+      width: 80%;
+    }
+    h3 {
+      text-align: right;
+      color: $grey-text;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1em;
+      @media screen and (max-width: $break-small) {
+        text-align: left;
+        font-size: 1.1em;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $grey-text;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.3em;
+      @media screen and (max-width: $break-small) {
+        font-size: 1.2em;
+      }
+      &:hover {
+        color: black;
+      }
+    }
+    p {
+      color: $grey-text;
+    }
+  }
+}
+#finger-image{
+  width: 100%;
+}
+
+//*******************carl's page***************
+.carl-header {
+  background-color: #ebfafd;
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 40%;
+  }
+  .carl-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: $break-small) {
+      flex-direction: column;
+      div.carl-image img {
+        width: 99%;
+      }
+    }
+  }
+  .left-title {
+    flex-grow: 0.87;
+    padding-top: 70px;
+    @media screen and (max-width: $break-small) {
+      margin-bottom: 5%;
+    }
+     h1 {
+      font-family: 'Poiret One', cursive;
+      font-size: 2.3em;
+      margin: 0;
+      letter-spacing: 4px;
+    }
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+    }
+  }
+  .teacher-title {
+    padding-top: 0;
+  }
+}
+.carl-right {
+  padding-top: 40px;
+  @media screen and (max-width: $break-small) {
+    padding-top: 0;
+  }
+}
+
+//*******************summer page***************
+.summer-header {
+  background-color: #F7EAC7;
+  @media screen and (max-width: $break-small) {
+    height: 14em;
+    margin-bottom: 0;
+  }
+}
+#date {
+  width: 70%;
+  margin: 5% auto 0 auto;
+  @media screen and (max-width: $break-small) {
+    width: 80%;
+  }
+  p {
+    color: $grey-text;
+  }
+}
+.gallery {
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 5%;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
+  img {
+    width: 31%;
+    margin: 1%;
+    @media screen and (max-width: $break-small) {
+      width: 90%;
+      margin-left: auto;
+    }
+  }
+  p {
+    text-align: center;
+    margin: 5% 0;
+    @media screen and (max-width: $break-small) {
+      margin: 4%;
+      width: 80%;
+    }
+    a {
+      color: $grey-text;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.3em;
+      font-family: 'Raleway', sans-serif;
+      @media screen and (max-width: $break-small) {
+        font-size: 1em;
+      }
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+//******************* archive summer page***************
+.archive-header {
+  background-color: #FFF2CD;
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 10%;
+  }
+  .archive-bubble-image {
+    padding-top: .5%;
+  }
+}
