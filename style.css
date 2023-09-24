@@ -36,6 +36,8 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+h4,p { margin-top: 0; }
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -487,11 +489,13 @@ nav {
   margin-bottom: 5%; }
 
 .teacher-info {
-  display: flex;
-  flex-wrap: wrap; }
+    column-count: 2;
+    column-width: 400px;
+ }
   @media screen and (max-width: 500px) {
-    .teacher-info {
-      flex-direction: column; } }
+      .teacher-info {
+	  column-count: unset;
+ } }
   .teacher-info div {
     width: 46%;
     margin: 0 auto; }
