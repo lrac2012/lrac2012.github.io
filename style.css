@@ -36,6 +36,8 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+h4,p { margin-top: 0; }
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -383,11 +385,11 @@ body {
     font-family: "Times New Roman", Times, serif; }
   @media screen and (max-width: 500px) {
     .container {
-      width: 100%; } }
+	width: 90%;
+	margin-auto;} }
 
 header {
-  height: 20.4em;
-  background-color: #D7E3FB;
+    min-height: 400px;
   margin-bottom: 4%; }
   @media screen and (max-width: 500px) {
     header {
@@ -487,11 +489,13 @@ nav {
   margin-bottom: 5%; }
 
 .teacher-info {
-  display: flex;
-  flex-wrap: wrap; }
+    column-count: 2;
+    column-width: 400px;
+ }
   @media screen and (max-width: 500px) {
-    .teacher-info {
-      flex-direction: column; } }
+      .teacher-info {
+	  column-count: unset;
+ } }
   .teacher-info div {
     width: 46%;
     margin: 0 auto; }
@@ -576,7 +580,7 @@ nav {
   width: 100%; }
 
 .carl-header {
-  background-color: #ebfafd; }
+}
   @media screen and (max-width: 500px) {
     .carl-header {
       margin-bottom: 40%; } }
@@ -592,7 +596,7 @@ nav {
           width: 99%; } }
   .carl-header .left-title {
     flex-grow: 0.87;
-    padding-top: 70px; }
+    padding-top: 10px; }
     @media screen and (max-width: 500px) {
       .carl-header .left-title {
         margin-bottom: 5%; } }
