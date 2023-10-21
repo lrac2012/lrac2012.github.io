@@ -467,13 +467,17 @@ nav {
   display: flex;
   flex-direction: column; }
 
+.left-title {
+    text-align: right }
+
+
 .teacher-title {
-  width: 50%;
-  text-align: right;
+  width: 100%;
+
   padding-top: 6%; }
   @media screen and (max-width: 500px) {
     .teacher-title {
-      width: 100%;
+      width: 368px;
       text-align: center; } }
   .teacher-title h1 {
     font-family: 'Poiret One', cursive;
@@ -594,9 +598,12 @@ nav {
       .carl-header .carl-title {
         flex-direction: column; }
         .carl-header .carl-title div.carl-image img {
-          width: 99%; } }
+            width: 99%; } }
+    .carl-header .carl-image {
+	flex-grow:1 ;
+    }
   .carl-header .left-title {
-    flex-grow: 0.87;
+    flex-grow: 1;
     padding-top: 10px; }
     @media screen and (max-width: 500px) {
       .carl-header .left-title {
