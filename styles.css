@@ -1,0 +1,201 @@
+/* Carl Laukkanen — Music Teacher & Composer */
+:root {
+  --background: oklch(0.93 0.04 270);
+  --foreground: oklch(0.2 0.02 270);
+  --card: oklch(0.97 0.02 270);
+  --muted-foreground: oklch(0.4 0.03 270);
+  --border: oklch(0.82 0.04 270);
+  --primary: oklch(0.25 0.04 270);
+
+  --font-display: "Poiret One", cursive;
+  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Times New Roman", Times, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; }
+
+/* Layout */
+.page { min-height: 100vh; }
+
+.header { padding: 1.5rem 1rem 0; }
+@media (min-width: 640px) { .header { padding-top: 2.5rem; } }
+
+.nav {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: var(--font-sans);
+}
+@media (min-width: 640px) { .nav { gap: 3rem; } }
+
+.nav a {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--muted-foreground);
+  transition: color 0.2s;
+}
+.nav a:hover { color: var(--foreground); }
+.nav a.active { color: var(--foreground); font-weight: 600; }
+@media (min-width: 640px) { .nav a { font-size: 1.125rem; } }
+
+.title-row {
+  max-width: 64rem;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .title-row {
+    margin-top: 3rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}
+
+.title-text { text-align: center; }
+@media (min-width: 640px) { .title-text { text-align: left; } }
+
+.title-text h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+@media (min-width: 640px) {
+  .title-text h1 { font-size: 3rem; white-space: nowrap; }
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: var(--muted-foreground);
+}
+@media (min-width: 640px) { .subtitle { font-size: 1rem; } }
+
+.hero-img { width: 11rem; }
+@media (min-width: 640px) { .hero-img { width: 18rem; } }
+@media (min-width: 768px) { .hero-img { width: 20rem; } }
+
+.main { padding: 2.5rem 1rem 4rem; }
+@media (min-width: 640px) { .main { padding-top: 4rem; } }
+
+/* Home article */
+.article {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) { .article { gap: 2rem; } }
+@media (min-width: 1024px) {
+  .article {
+    max-width: 64rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+.article p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+@media (min-width: 640px) { .article p { font-size: 1rem; } }
+
+/* Testimonials */
+.testimonials-wrap { max-width: 48rem; margin: 0 auto; }
+.testimonials-wrap h2 {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+@media (min-width: 640px) { .testimonials-wrap h2 { font-size: 1.875rem; } }
+
+.testimonial-list > article + article { margin-top: 2.5rem; }
+.testimonial-list h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+@media (min-width: 640px) { .testimonial-list h3 { font-size: 1rem; } }
+.testimonial-list p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+}
+@media (min-width: 640px) { .testimonial-list p { font-size: 1rem; } }
+
+/* Contact block */
+.contact {
+  max-width: 48rem;
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  background-color: color-mix(in oklab, var(--card) 40%, transparent);
+  border-radius: 0.5rem;
+}
+@media (min-width: 640px) { .contact { margin-top: 4rem; padding: 2rem; } }
+.contact h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 640px) { .contact h2 { font-size: 1.125rem; } }
+.contact .email {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  word-break: break-all;
+}
+.contact .email:hover { color: var(--primary); }
+@media (min-width: 640px) { .contact .email { font-size: 1.125rem; } }
+.contact .location {
+  margin: 1rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+@media (min-width: 640px) { .contact .location { font-size: 1rem; } }
+
+/* Footer */
+.footer { padding: 0 1rem 2.5rem; }
+.footer-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
